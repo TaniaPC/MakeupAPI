@@ -1,0 +1,168 @@
+<!--Proyecto final Makeup API-->
+<!--Creado: 8/8/22-->
+<!--TaniaPC-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bulma CSS - MakeupAPI</title>
+	<link rel="stylesheet" type="text/css" href="bulma-0.7.5/css/bulma.min.css">
+  <link rel="icon" type="image/png" href="../MakeupAPI/img/makeup.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Water+Brush&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../MakeupAPI/css/style.css">
+</head>
+<body>
+<div class="container is-fluid">
+<!--menucito-->  
+<nav class="navbar is-white" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+     <a class="navbar-brand" href="#">
+       <img src="./img/makeuplogo.png" />
+      </a>     
+      <a class="navbar-item" href="https://centralmakeup.mx/">
+        <b>MakeupAPI</b>
+      </a>
+      <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start">
+        <a href="#" class="navbar-item" id="lonuevo" class="is-active">
+          Lo Nuevo
+        </a>
+      </div>
+    </div>
+    <div class="navbar-end">
+      <div class="navbar-item">
+       <!--Buscar Makeup-->
+      <div class="control">
+      <input class="input" type="text" autocomplete="off" id="busqueda" placeholder="Buscar...">
+      </div>
+      <div class="control">
+         <a class="button is-red">
+         Click
+      </a>
+     </div>
+    <!--para boton de twitter-->
+         <i class="fab fa-lg fa-twitter">
+            <a href="https://twitter.com" target="_blank"><img src="../MakeupAPI/img/tweet.jpg"></a> 
+         </i>
+      </nav> 
+    </div>
+   </div>
+
+<!--los makeups listados-->   
+<div class="lists_makeups" id="lists_makeups">
+
+</div>
+
+
+<!--contenedor-->
+<section class="hero is-danger" class="section is-medium">
+  <div class="hero-body">
+      <nav>
+        <h1 id="titulo" data-student="Tania" data-content="makeups" class="b">
+          My Makeup API
+        </h1>
+        <br>
+        <h2 class="subtitle">
+         <br>
+         <p class="a"><strong>"El maquillaje es arte. La belleza es espíritu."</strong></p> 
+        </h2>
+        <div class="card-content is-flex is-horizontal-center">
+        <figure class="image is-150x150 is-inline-block">
+          <img class="is-rounded" src="../MakeupAPI/img/makeup02.jpg"/>
+        </figure>
+      </div>     
+      </nav>
+  </div>
+</section>
+
+<br>
+<!--Imagen makeup-->
+<div id="resultado" class="columns is-multiline is-mobile">
+  <!--esto a la goma-->
+      <!--<div class="column is-3">
+          <div class="card">
+              <div class="card-image">
+                  <figure class="image is-4by3">
+                    <img src="https://s3.amazonaws.com/donovanbailey/products/api_featured_images/000/001/048/original/open-uri20180708-4-13okqci?1531093614
+                    " alt="Makeup">
+                  </figure>
+              </div>
+              <div class="card-content">
+                  <p><b>Nombre Makeup:</b></p>
+                  <p><b>Marca:</b></p>
+                  <p><b>Tonos:</b></p>
+              </div>
+          </div>
+      </div>
+  </div>-->
+</div>
+<br>
+<br>
+
+<!--para el modal-->
+ <div class="modal" class="is-horizontal-center">
+   <div class="modal-background"></div>
+    <div class="modal-content">
+      <header class="modal-card-head">
+        <p class="modal-card-title">MAKEUPS SHOP</p>
+        <button class="delete" class="modal-close is-1-desktop" aria-label="close"></button>
+      </header>
+
+      <!--contenido en la tarjeta-->
+     <section class="modal-content">
+        <div class="columns">
+          <div class="column">
+              <figure class="image">
+                  <img id="ficha-img" src="https://d3t32hsnjxo7q6.cloudfront.net/i/4992a5ad01b474ae1de4a955d6224aca_ra,w158,h184_pa,w158,h184.jpeg">
+                </figure>
+          </div>
+          <div class="column">
+              <p><span id="dob"></span> - <span id="dod"></span></p>
+              <p><b>Tipo producto:</b> <span id="ficha-product_type"></span></p>
+              <p><b>Precio:</b> <span id="price_sign"></span></p>  
+              <p><b>Descripción:</b> <span id="ficha-description"></span></p>
+              <a href="https://www.chickadvisor.com/item/revlon-colorburst-lacquer-balm-1/" class="button is-danger mt-3" target="_blank" id="ficha-button">Ir al sitio oficial</a>-->
+          </div>
+        </section>
+    </div>
+  </div>
+ </div>
+</div>
+
+<!--la paginacion -->
+<nav class="pagination is-centered" class="pagination is-rounded" role="navigation" aria-label="pagination">
+  <a class="pagination-previous">Previous</a>
+  <a class="pagination-next">Next page</a>
+  <!--lista desordenada-->
+  <ul class="pagination-list">
+    <li><a class="pagination-link" aria-label="Goto page 1">1</a></li>
+    <li><span class="pagination-ellipsis">&hellip;</span></li>
+    <li><a class="pagination-link" aria-label="Goto page 7">7</a></li>
+    <li><a class="pagination-link is-current" aria-label="Page 8" aria-current="page">8</a></li>
+    <li><a class="pagination-link" aria-label="Goto page 9">9</a></li>
+    <li><span class="pagination-ellipsis">&hellip;</span></li>
+    <li><a class="pagination-link" aria-label="Goto page 10">10</a></li>
+  </ul>
+</nav>
+<!--el footer-->
+<footer class="footer">
+  <div class="content has-text-centered">
+    <p>
+    <strong>Proyecto - Bulma CSS, HTML y JavaScript</strong>   
+    <p>
+    <a href="https://github.com/TaniaPC">GitHub - TaniaPC</a> &copy; 2022   
+    </p>
+  </div>
+</footer>
+<script src="js/script.js"></script>
+</div>
+</body>
+</html>
+
+
+      
